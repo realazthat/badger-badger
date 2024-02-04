@@ -5,6 +5,8 @@ set -e -x -v -u -o pipefail
 GITHUB_PAGES_BRANCH=gh-pages
 OUTPUTDIR=dist/
 
+npm run build
+
 # git subtree push --prefix dist origin gh-pages
 ghp-import -n -p -f "${OUTPUTDIR}" -b "${GITHUB_PAGES_BRANCH}"
 
