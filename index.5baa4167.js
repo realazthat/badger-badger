@@ -580,7 +580,7 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"igcvL":[function(require,module,exports) {
 // For semistandard.
-/* global FileReader */ /* global Image */ /* global Blob */ /* global URL */ /* global XMLSerializer */ var _runtime = require("regenerator-runtime/runtime");
+/* global FileReader */ /* global Image */ /* global Blob */ /* global URL */ /* global XMLSerializer */ require("ac256bdee5f20bff");
 function ClearCircle({ x, y, radius, ctx }) {
     // ctx.fillStyle = 'rgba(0, 0, 0, 0)';
     ctx.globalCompositeOperation = "destination-out";
@@ -1323,7 +1323,7 @@ document.getElementById("lower-right").click();
 document.getElementById("default-radius").click();
 document.getElementById("default-contents").click();
 
-},{"regenerator-runtime/runtime":"dXNgZ"}],"dXNgZ":[function(require,module,exports) {
+},{"ac256bdee5f20bff":"dXNgZ"}],"dXNgZ":[function(require,module,exports) {
 /**
  * Copyright (c) 2014-present, Facebook, Inc.
  *
