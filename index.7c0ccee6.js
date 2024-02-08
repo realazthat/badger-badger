@@ -715,7 +715,7 @@ document.getElementById("default-contents").addEventListener("click", function(e
     window.badgerState.MarkDirty();
 });
 document.getElementById("sample-pfp").addEventListener("click", async function(e) {
-    console.log(`sample-pfp.click`);
+    console.log("sample-pfp.click");
     const imageElement = document.getElementById("sample-pfp-image");
     console.log(`imageElement: ${imageElement}`);
     const blob = await LoadImageAsBlob(imageElement);
