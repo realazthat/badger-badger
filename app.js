@@ -6,6 +6,10 @@
 /* global URL */
 /* global XMLSerializer */
 
+// https://github.com/parcel-bundler/parcel/issues/1762#issuecomment-763720624
+// https://github.com/parcel-bundler/parcel/issues/1762#issuecomment-1154349769
+require('regenerator-runtime/runtime')
+
 function ClearCircle ({ x, y, radius, ctx }) {
   // ctx.fillStyle = 'rgba(0, 0, 0, 0)';
   ctx.globalCompositeOperation = 'destination-out';
@@ -554,12 +558,15 @@ async function LoadBlobAsImage (blob) {
 }
 
 async function LoadImageAsBlob (image/* Image */) {
-  return new Promise((resolve, reject) => {
+  console.log(`LoadImageAsBlob().image: ${image}, image.width: ${image.width}, image.height: ${image.height}`);
+  console.log(`image instanceof Image: ${image instanceof Image}`);
+  return await new Promise((resolve, reject) => {
     // Define the processImage function to be used in the load event listener
     const processImage = () => {
       const canvas = document.createElement('canvas');
       canvas.width = image.width;
       canvas.height = image.height;
+      console.log(`LoadImageAsBlob().processImage().image.width: ${image.width}, image.height: ${image.height}`);
       const ctx = canvas.getContext('2d');
       ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 
@@ -833,7 +840,8 @@ document.getElementById('default-contents').addEventListener('click', function (
 });
 
 document.getElementById('sample-pfp').addEventListener('click', async function (e) {
-  const blob = await LoadImageAsBlob(document.getElementById('sample-pfp-image'));
+  const imageElement = document.getElementById('sample-pfp-image');
+  const blob = await LoadImageAsBlob(imageElement);
   window.badgerState.mainImage = await LoadBlobAsImage(blob);
   window.badgerState.MarkDirty();
 });

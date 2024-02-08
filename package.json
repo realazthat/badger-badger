@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel index.html",
-    "build": "parcel build index.html --public-url '/badger-badger/'",
+    "serve": "serve",
+    "build": "parcel build index.html --public-url '/badger-badger/' --no-cache",
     "format": "semistandard --fix --ignore 'dist/*'",
     "flow": "flow",
     "flow:stop": "flow stop",
@@ -16,11 +17,21 @@
   "devDependencies": {
     "@babel/core": "^7.23.9",
     "@babel/plugin-transform-flow-strip-types": "^7.23.3",
+    "@parcel/babel-plugin-transform-runtime": "^2.11.0",
     "flow-bin": "^0.228.0",
     "parcel": "^2.11.0",
     "semistandard": "^17.0.0"
   },
   "dependencies": {
     "serve": "^14.2.1"
+  },
+  "babel": {
+    "presets": [
+      "@parcel/babel-preset-env",
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "@parcel/babel-plugin-transform-runtime"
+    ]
   }
 }
