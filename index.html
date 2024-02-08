@@ -48,13 +48,33 @@
     </style>
   </head>
   <body>
-    <div style="float: left;">
-      <h1>
-        <a href="https://github.com/realazthat/badger-badger" target="_blank"><i class="fab fa-github"></i></a>
-        Add a discord notification badge to your PFP or server PFP
-        <a href="https://github.com/realazthat/badger-badger" target="_blank"><i class="fab fa-github"></i></a>
-      </h1>
+    <h1 style="float: left">
+      <a href="https://github.com/realazthat/badger-badger" target="_blank"><i class="fab fa-github"></i></a>
+      Add a discord notification badge to your PFP or server PFP
+      <a href="https://github.com/realazthat/badger-badger" target="_blank"><i class="fab fa-github"></i></a>
+    </h1>
+    <div style="float: right">
+      <table>
+        <tr>
+          <td>Monero address:</td>
+          <td><span style="font-size: 6px">45VMqhActfp7W2i6N2FomKEuHrum2UK8CEQAaQThkdnUBAy3HXQvHQ76MmarZQkwcZ5DPdmrortBw6YUiwgjLtwoN1cuNWS</span></td>
+        </tr>
+        <tr>
+          <td>github:</td>
+          <td>
+            <a href="https://github.com/realazthat/badger-badger" target="_blank">github.com/realazthat/badger-badger</a>
+          </td>
+        </tr>
+      </table>
     </div>
+    <fieldset style="float: right">
+      <legend>Demo video</legend>
+      <video autoplay loop muted playsinline controls
+        src="assets/badger-badger-demo.webm"
+        type="video/webp"
+        style="width: 256px; "> </video>
+    </fieldset>
+    
     <div style="clear: both;"></div>
     <fieldset>
       <legend>Upload</legend>
@@ -118,21 +138,21 @@
     </fieldset>
     <fieldset>
       <legend>Badge</legend>
-      <img src="assets/badger-badger-demo.webp" alt="Badger Badger Demo" style="float: right; height: 256px" />
+
       <table>
         <tr>
           <td>
             <div id="canvas-container">
               <div id="bg"></div>
-              <canvas id="canvas" style="display: none"></canvas>
-              <canvas id="canvas-overlay" style="display: none"></canvas>
+              <canvas id="canvas" style="display: block"></canvas>
+              <canvas id="canvas-overlay" style="display: block"></canvas>
             </div>
           </td>
           <td>
             <div id="svg-container">
               <div id="bg"></div>
-              <svg id="svg" style="display: none"></svg>
-              <svg id="svg-overlay" style="display: none"></svg>
+              <svg id="svg" style="display: block"></svg>
+              <svg id="svg-overlay" style="display: block"></svg>
             </div>
           </td>
         </tr>

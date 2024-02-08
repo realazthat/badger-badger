@@ -9,7 +9,7 @@
     "format": "semistandard --fix --ignore 'dist/*'",
     "flow": "flow",
     "flow:stop": "flow stop",
-    "flow:check": "flow check"  
+    "flow:check": "flow check"
   },
   "author": "",
   "license": "MIT",
@@ -19,5 +19,8 @@
     "flow-bin": "^0.228.0",
     "parcel": "^2.11.0",
     "semistandard": "^17.0.0"
+  },
+  "dependencies": {
+    "serve": "^14.2.1"
   }
 }
