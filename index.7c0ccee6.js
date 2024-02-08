@@ -476,6 +476,7 @@ async function LoadImageAsBlob(image /* Image */ ) {
             const canvas = document.createElement("canvas");
             canvas.width = image.width;
             canvas.height = image.height;
+            console.log(`LoadImageAsBlob().image.width: ${image.width}, image.height: ${image.height}`);
             const ctx = canvas.getContext("2d");
             ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
             canvas.toBlob((blob)=>{
