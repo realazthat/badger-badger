@@ -470,13 +470,15 @@ async function LoadBlobAsImage(blob) {
     });
 }
 async function LoadImageAsBlob(image /* Image */ ) {
+    console.log(`LoadImageAsBlob().image: ${image}, image.width: ${image.width}, image.height: ${image.height}`);
+    console.log(`image instanceof Image: ${image instanceof Image}`);
     return new Promise((resolve, reject)=>{
         // Define the processImage function to be used in the load event listener
         const processImage = ()=>{
             const canvas = document.createElement("canvas");
             canvas.width = image.width;
             canvas.height = image.height;
-            console.log(`LoadImageAsBlob().image.width: ${image.width}, image.height: ${image.height}`);
+            console.log(`LoadImageAsBlob().processImage().image.width: ${image.width}, image.height: ${image.height}`);
             const ctx = canvas.getContext("2d");
             ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
             canvas.toBlob((blob)=>{
@@ -713,7 +715,11 @@ document.getElementById("default-contents").addEventListener("click", function(e
     window.badgerState.MarkDirty();
 });
 document.getElementById("sample-pfp").addEventListener("click", async function(e) {
-    const blob = await LoadImageAsBlob(document.getElementById("sample-pfp-image"));
+    console.log(`sample-pfp.click`);
+    const imageElement = document.getElementById("sample-pfp-image");
+    console.log(`imageElement: ${imageElement}`);
+    const blob = await LoadImageAsBlob(imageElement);
+    console.log(`blob instanceof Blob: ${blob instanceof Blob}`);
     window.badgerState.mainImage = await LoadBlobAsImage(blob);
     window.badgerState.MarkDirty();
 });
