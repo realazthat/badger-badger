@@ -4,9 +4,9 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html",
-    "serve": "serve",
-    "build": "parcel build index.html --public-url '/badger-badger/' --no-cache",
+    "start": "parcel src/index.html  --no-cache",
+    "serve": "serve dist/",
+    "build": "parcel build src/index.html --public-url '/badger-badger/' --no-cache",
     "format": "semistandard --fix --ignore 'dist/*'",
     "flow": "flow",
     "flow:stop": "flow stop",
