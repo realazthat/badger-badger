@@ -580,7 +580,9 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"igcvL":[function(require,module,exports) {
 // For semistandard.
-/* global FileReader */ /* global Image */ /* global Blob */ /* global URL */ /* global XMLSerializer */ require("ac256bdee5f20bff");
+/* global FileReader */ /* global Image */ /* global Blob */ /* global URL */ /* global XMLSerializer */ // https://github.com/parcel-bundler/parcel/issues/1762#issuecomment-763720624
+// https://github.com/parcel-bundler/parcel/issues/1762#issuecomment-1154349769
+require("ac256bdee5f20bff");
 function ClearCircle({ x, y, radius, ctx }) {
     // ctx.fillStyle = 'rgba(0, 0, 0, 0)';
     ctx.globalCompositeOperation = "destination-out";
