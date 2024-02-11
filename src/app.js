@@ -8,7 +8,7 @@
 
 // https://github.com/parcel-bundler/parcel/issues/1762#issuecomment-763720624
 // https://github.com/parcel-bundler/parcel/issues/1762#issuecomment-1154349769
-require('regenerator-runtime/runtime')
+require('regenerator-runtime/runtime');
 
 function ClearCircle ({ x, y, radius, ctx }) {
   // ctx.fillStyle = 'rgba(0, 0, 0, 0)';
