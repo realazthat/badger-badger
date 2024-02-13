@@ -7,7 +7,9 @@
     "start": "parcel src/index.html --public-url '/badger-badger/'",
     "serve": "serve dist/",
     "build": "parcel build src/index.html --public-url '/badger-badger/' --no-cache",
-    "format": "semistandard --fix --ignore 'dist/*'",
+    "format:js": "semistandard --fix --ignore 'dist/*'",
+    "format:md": "prettier --write **/*.md",
+    "format": "npm run format:js && npm run format:md",
     "flow": "flow",
     "flow:stop": "flow stop",
     "flow:check": "flow check"
@@ -20,6 +22,7 @@
     "@parcel/babel-plugin-transform-runtime": "^2.11.0",
     "flow-bin": "^0.228.0",
     "parcel": "^2.11.0",
+    "prettier": "^3.2.5",
     "semistandard": "^17.0.0"
   },
   "dependencies": {
