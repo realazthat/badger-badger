@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/index.html --public-url '/badger-badger/'",
+    "start": "parcel serve src/index.html --public-url '/badger-badger/' --no-cache",
     "serve": "serve dist/",
     "build": "parcel build src/index.html --public-url '/badger-badger/' --no-cache",
     "format:js": "semistandard --fix --ignore 'dist/*'",
