@@ -22,4 +22,5 @@ npm run serve
 
 ## Related projects
 
-- <https://tools.nese.dev/discord-april-fools>.
+- <https://tools.nese.dev/discord-april-fools>,
+  <https://codepen.io/Nesewebel/full/jOPJPqW>.
