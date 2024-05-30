@@ -19,3 +19,7 @@ npm run build
 npm run serve
 # Navigate to http://localhost:3000/badger-badger/. Note the trailing slash!
 ```
+
+## Related projects
+
+- <https://tools.nese.dev/discord-april-fools>.
