@@ -4,13 +4,13 @@
   "description": "Add a badge to a discord {user,server} profile picture.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel serve src/index.html --public-url '/badger-badger/' --no-cache --dist-dir dist/coverator",
+    "start": "parcel serve src/index.html --public-url '/badger-badger/' --no-cache --dist-dir dist/badger-badger",
     "serve": "serve dist/",
-    "build": "parcel build src/index.html --public-url '/badger-badger/' --no-cache --dist-dir dist/coverator",
+    "build": "parcel build src/index.html --public-url '/badger-badger/' --no-cache --dist-dir dist/badger-badger",
     "format:js": "semistandard --fix --ignore 'dist/*'",
     "format:md": "prettier --write **/*.md",
     "format": "npm run format:js && npm run format:md",
-    "deploy": "gh-pages -d dist/coverator -b gh-pages",
+    "deploy": "gh-pages -d dist/badger-badger -b gh-pages",
     "flow": "flow",
     "flow:stop": "flow stop",
     "flow:check": "flow check"
